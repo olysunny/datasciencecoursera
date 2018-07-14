@@ -8,7 +8,7 @@ download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUC
 
 # read data
 unzip("project.zip")
-setwd("./UCI HAR Dataset")
+setwd("/Users/a123/Desktop/R/Getting and Cleaning Data/UCI HAR Dataset")
 
 test_y<-read.table("./test/y_test.txt")
 test_x<-read.table("./test/X_test.txt")
@@ -46,4 +46,5 @@ data3<- data2 %>%
         group_by(act_sub) %>%
         summarise_all(funs(mean))
 write.csv(data3,"q5.csv")
+write.table(data3,"q5.text",row.names = F)
 
